@@ -41,6 +41,7 @@ public final class UhcPlus extends JavaPlugin {
         // Plugin startup logic
         saveDefaultConfig();
         Config.loadConfig(getConfig());
+        Config2.loadConfig2(getConfig());
         new SwordListener(this);
         new MainCommand(this);
     }

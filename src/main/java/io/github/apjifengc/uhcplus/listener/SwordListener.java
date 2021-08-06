@@ -38,7 +38,7 @@ public class SwordListener implements Listener {
         if (event.getDamager() instanceof Player) {
             Player damager = (Player) event.getDamager();
             if (taskMap.containsKey(damager)) return;
-            if (ItemUtil.isSimilar(Config2.SWORD, damager.getInventory().getItemInMainHand())) {
+            if (ItemUtil.isSimilar(Config2.SWORD, damager.getInventory().getItemInMainHand())&&Config.isAddDamage) {
                 event.setDamage(event.getDamage() + Config2.addDamage);
                 damager.getWorld().playSound(event.getEntity().getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0F, 1.0F);
                 taskMap.put(damager, new BukkitRunnable() {
