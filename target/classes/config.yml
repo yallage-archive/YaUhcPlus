@@ -1,0 +1,8 @@
+sword: '{"type":"IRON_SWORD","lore":["&5This is SCAME Sword!"]}'
+addDamage: 4
+holdEffects:
+  - type: SPEED
+    level: 1
+  - type: DAMAGE_RESISTANCE
+    level: 1
+cd: 5.0
