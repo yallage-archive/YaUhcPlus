@@ -116,3 +116,4 @@ run/
 .settings/
 .classpath
 .project
+.factorypath

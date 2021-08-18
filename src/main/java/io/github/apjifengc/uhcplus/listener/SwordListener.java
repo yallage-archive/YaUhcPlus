@@ -1,22 +1,21 @@
 package io.github.apjifengc.uhcplus.listener;
 
-import io.github.apjifengc.uhcplus.Config;
-import io.github.apjifengc.uhcplus.Config2;
-import io.github.apjifengc.uhcplus.UhcPlus;
-import io.github.apjifengc.uhcplus.util.ItemUtil;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import org.bukkit.event.inventory.InventoryInteractEvent;
-import org.bukkit.event.player.PlayerEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
 
-import java.util.HashMap;
-import java.util.Map;
+import io.github.apjifengc.uhcplus.Config;
+import io.github.apjifengc.uhcplus.Config2;
+import io.github.apjifengc.uhcplus.UhcPlus;
+import io.github.apjifengc.uhcplus.util.ItemUtil;
 
 public class SwordListener implements Listener {
     private UhcPlus plugin;

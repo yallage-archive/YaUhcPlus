@@ -1,19 +1,18 @@
 package io.github.apjifengc.uhcplus;
 
-import com.gmail.val59000mc.configuration.YamlFile;
-import com.gmail.val59000mc.exceptions.ParseException;
+import java.util.List;
+import java.util.Objects;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 import com.gmail.val59000mc.utils.JsonItemStack;
 import com.gmail.val59000mc.utils.JsonItemUtils;
+
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-
-import java.util.List;
-import java.util.Objects;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 public class Config {
     public static JsonItemStack SWORD;
@@ -24,8 +23,7 @@ public class Config {
 
     public static void loadConfig(FileConfiguration config) {
         Bukkit.getLogger().info("[UhcPlus] Loading ultimates");
-        YamlFile cfg = null;
-        ConfigurationSection customUltimateSection = cfg.getConfigurationSection("custom-ultimates");
+        ConfigurationSection customUltimateSection = config.getConfigurationSection("custom-ultimates");
         Set<String> ultimateKeys = customUltimateSection.getKeys(false);
         for(String name : ultimateKeys) {
             try{
