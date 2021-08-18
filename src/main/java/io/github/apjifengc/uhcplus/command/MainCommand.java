@@ -1,7 +1,6 @@
 package io.github.apjifengc.uhcplus.command;
 
 import io.github.apjifengc.uhcplus.Config;
-import io.github.apjifengc.uhcplus.Config2;
 import io.github.apjifengc.uhcplus.UhcPlus;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -32,7 +31,6 @@ public class MainCommand implements TabCompleter, CommandExecutor {
         if (strings.length == 1 && strings[0].equals("reload")) {
             plugin.reloadConfig();
             Config.loadConfig(plugin.getConfig());
-            Config2.loadConfig2(plugin.getConfig());
             commandSender.sendMessage("Reload complete.");
             return true;
         }
